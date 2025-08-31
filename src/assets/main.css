@@ -1,0 +1,45 @@
+/* src/main.css */
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+
+  /* Nền ảnh */
+  background-image: url('/OIP.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tuỳ chọn: Lớp phủ tối mờ giúp dễ đọc chữ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2); /* Độ mờ */
+  z-index: -1;
+}
+
+/* Cuộn trang mượt & gọn */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* Liên kết */
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
